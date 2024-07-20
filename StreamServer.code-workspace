@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "StreamServer"
+		},
+		{
+			"path": "StreamDecodeServer"
+		}
+	],
+	"settings": {}
+}

@@ -1,0 +1,112 @@
+<mxfile host="Electron" modified="2024-07-12T18:25:48.903Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="yFDKjC2uhG5munsUcDz8" version="22.1.2" type="device">
+  <diagram name="Архітектура" id="lEX8NhUmVt0KLmWjKqjB">
+    <mxGraphModel dx="913" dy="1640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PTnn4TakSIxV7CQiecpr-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-1" target="PTnn4TakSIxV7CQiecpr-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-1" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="210" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-3" value="API&amp;nbsp;Gateway" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.api_gateway;fillColor=#D9A741;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="180" y="193.5" width="76.5" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-19" value="RPC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-5" target="PTnn4TakSIxV7CQiecpr-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-5" target="PTnn4TakSIxV7CQiecpr-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-5" value="Auth" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/App_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="390" y="-65" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-20" value="RPC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-6" target="PTnn4TakSIxV7CQiecpr-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-6" target="PTnn4TakSIxV7CQiecpr-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-6" value="Stream" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/App_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="390" y="65" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-15" value="HTTP" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.8;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-7" target="PTnn4TakSIxV7CQiecpr-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="269.9999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-23" value="RPC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-7" target="PTnn4TakSIxV7CQiecpr-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-7" target="PTnn4TakSIxV7CQiecpr-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-7" value="Chat" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/App_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="390" y="455" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-8" target="PTnn4TakSIxV7CQiecpr-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-8" value="Email" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/App_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="390" y="585" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-18" value="HTTP" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-9" target="PTnn4TakSIxV7CQiecpr-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-21" value="RPC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-9" target="PTnn4TakSIxV7CQiecpr-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-9" target="PTnn4TakSIxV7CQiecpr-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-9" value="Search" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/App_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="390" y="198.5" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-16" value="HTTP" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-10" target="PTnn4TakSIxV7CQiecpr-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-22" value="RPC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-10" target="PTnn4TakSIxV7CQiecpr-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-10" target="PTnn4TakSIxV7CQiecpr-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-10" value="Records" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/App_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="390" y="325" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-12" value="HTTP/RTMP" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.21;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-6" target="PTnn4TakSIxV7CQiecpr-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-13" value="HTTP" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.21;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-5" target="PTnn4TakSIxV7CQiecpr-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-14" value="HTTP" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.8;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="PTnn4TakSIxV7CQiecpr-8" target="PTnn4TakSIxV7CQiecpr-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-31" value="MongoDB" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="480" y="-70" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-33" value="MongoDB" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="480" y="60" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-34" value="MongoDB" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="480" y="193.5" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-35" value="MongoDB" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="480" y="320" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-36" value="MongoDB" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="480" y="450" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PTnn4TakSIxV7CQiecpr-37" value="MongoDB" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="480" y="580" width="60" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
