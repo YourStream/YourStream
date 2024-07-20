@@ -1,9 +1,30 @@
 [submodule "StreamServer"]
 	path = StreamServer
-	url = https://github.com/VoDACode/StreamServer.git
+	url = https://github.com/YourStream/StreamServer.git
 [submodule "StreamDecodeServer"]
 	path = StreamDecodeServer
-	url = https://github.com/VoDACode/StreamDecodeServer.git
+	url = https://github.com/YourStream/StreamDecodeServer.git
 [submodule "YourStreamWebApp"]
 	path = YourStreamWebApp
-	url = https://github.com/VoDACode/YourStreamWebApp.git
+	url = https://github.com/YourStream/YourStreamWebApp.git
+[submodule "AuthService"]
+	path = Services/AuthService
+	url = https://github.com/YourStream/AuthService.git
+[submodule "ChatService"]
+	path = Services/ChatService
+	url = https://github.com/YourStream/ChatService.git
+[submodule "NotificationService"]
+	path = Services/NotificationService
+	url = https://github.com/YourStream/NotificationService.git
+[submodule "RegistrationService"]
+	path = Services/RegistrationService
+	url = https://github.com/YourStream/RegistrationService.git
+[submodule "SearchService"]
+	path = Services/SearchService
+	url = https://github.com/YourStream/SearchService.git
+[submodule "StreamService"]
+	path = Services/StreamService
+	url = https://github.com/YourStream/StreamService.git
+[submodule "UserDataService"]
+	path = Services/UserDataService
+	url = https://github.com/YourStream/UserDataService.git
