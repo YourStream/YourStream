@@ -1,0 +1,9 @@
+[submodule "StreamServer"]
+	path = StreamServer
+	url = https://github.com/VoDACode/StreamServer.git
+[submodule "StreamDecodeServer"]
+	path = StreamDecodeServer
+	url = https://github.com/VoDACode/StreamDecodeServer.git
+[submodule "YourStreamWebApp"]
+	path = YourStreamWebApp
+	url = https://github.com/VoDACode/YourStreamWebApp.git
