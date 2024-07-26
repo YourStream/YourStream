@@ -28,3 +28,6 @@
 [submodule "UserDataService"]
 	path = Services/UserDataService
 	url = https://github.com/YourStream/UserDataService.git
+[submodule "ConfirmationService"]
+	path = Services/ConfirmationService
+	url = https://github.com/YourStream/ConfirmationService.git
