@@ -1,3 +1,6 @@
+[submodule "Core"]
+	path = Core
+	url = https://github.com/YourStream/Core.git
 [submodule "StreamServer"]
 	path = StreamServer
 	url = https://github.com/YourStream/StreamServer.git
