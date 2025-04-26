@@ -34,3 +34,6 @@
 [submodule "ConfirmationService"]
 	path = Services/ConfirmationService
 	url = https://github.com/YourStream/ConfirmationService.git
+[submodule "ServiceManager"]
+	path = Services/ServiceManager
+	url = https://github.com/YourStream/ServiceManager.git
