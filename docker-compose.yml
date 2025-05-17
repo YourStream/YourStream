@@ -67,7 +67,7 @@ services:
     environment:
       - PORT=80
       - AUTH_SERVICE_ADDRESS=http://service-manager-backend:3080
-      - STREAM_API_HOST=stream-api:3000
+      - STREAM_API_HOST=http://stream-api:3000
       - ORIGINAL_RTMP_SERVER=rtmp:1935
       - LOG_LEVEL=trace
     depends_on:
