@@ -4,6 +4,9 @@
 [submodule "StreamServer"]
 	path = StreamServer
 	url = https://github.com/YourStream/StreamServer.git
+[submodule "Server.API"]
+	path = Server.API
+	url = https://github.com/YourStream/Server.API.git
 [submodule "StreamDecodeServer"]
 	path = StreamDecodeServer
 	url = https://github.com/YourStream/StreamDecodeServer.git

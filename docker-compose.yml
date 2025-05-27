@@ -1,4 +1,9 @@
+networks:
+  your-stream-net:
+    driver: bridge
+
 services:
+  # Endpoints 
   rtmp:
     image: tiangolo/nginx-rtmp
     ports:
@@ -30,13 +35,9 @@ services:
     depends_on:
       - rtmp
       - hls-server
+      - main-api
     networks:
       - your-stream-net
-
-  # web-app:
-  #   build: ./YourStreamWebApp
-  #   networks:
-  #     - your-stream-net
 
   mongo:
     image: 'mongo:latest'
@@ -47,8 +48,17 @@ services:
     networks:
       - your-stream-net
   
+  redis:
+    image: 'redis:latest'
+    ports:
+      - '6379:6379'
+    networks:
+      - your-stream-net
+
+  # Stream processing services
   stream-api:
     build: ./StreamServer/stream-api
+    restart: unless-stopped
     environment:
       - PORT=3000
       - AUTH_SERVICE_ADDRESS=http://service-manager-backend:3080
@@ -60,10 +70,9 @@ services:
       - service-manager-backend
     networks:
       - your-stream-net
-
-
   transcoder:
     build: ./StreamServer/transcoder
+    restart: unless-stopped
     environment:
       - PORT=80
       - AUTH_SERVICE_ADDRESS=http://service-manager-backend:3080
@@ -76,9 +85,9 @@ services:
       - /tmp/hls:/tmp/hls
     networks:
       - your-stream-net
-
   viewer-api:
     build: ./StreamServer/viewer-api
+    restart: unless-stopped
     environment:
       - PORT=3000
       - STREAM_API_HOST=http://stream-api:3000
@@ -88,6 +97,7 @@ services:
     networks:
       - your-stream-net
 
+  # Service Manager
   service-manager-backend:
     build: ./Services/ServiceManager/backend
     restart: unless-stopped
@@ -102,7 +112,6 @@ services:
       - mongo
     networks:
       - your-stream-net
-
   service-manager-frontend:
     build: ./Services/ServiceManager/service-manager-admin
     restart: unless-stopped
@@ -113,6 +122,40 @@ services:
     networks:
       - your-stream-net
 
-networks:
-  your-stream-net:
-    driver: bridge
+  # Authentication Service
+  auth-service:
+    build: ./Services/AuthService
+    restart: unless-stopped
+    environment:
+      - AUTH_SERVICE_ADDRESS=http://service-manager-backend:3080
+      - MONGO_HOST=mongo
+      - MONGO_PORT=27017
+      - MONGO_USER=
+      - MONGO_PASSWORD=
+      - MONGO_DB=YourStream-Auth
+      - PORT=3000
+      - LOG_LEVEL=trace
+    depends_on:
+      - mongo
+    networks:
+      - your-stream-net
+
+  # Monolithic Server :/
+  main-api:
+    build: ./Server.API
+    restart: unless-stopped
+    environment:
+      - AUTH_SERVICE_ADDRESS=http://service-manager-backend:3080
+      - PORT=3000
+      - MONGO_HOST=mongo
+      - MONGO_PORT=27017
+      - MONGO_USER=
+      - MONGO_PASSWORD=
+      - MONGO_DB=YourStream-Main
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - mongo
+      - redis
+      - service-manager-backend
+    networks:
+      - your-stream-net
