@@ -63,11 +63,14 @@ services:
       - PORT=3000
       - AUTH_SERVICE_ADDRESS=http://service-manager-backend:3080
       - TRANSCODER_SERVICE_ADDRESS=http://transcoder:80
+      - USER_AUTH_SERVICE_ADDRESS=http://auth-service:3000
       - MONGO_HOST=mongo
       - LOG_LEVEL=trace
     depends_on:
       - transcoder
       - service-manager-backend
+      - auth-service
+      - mongo
     networks:
       - your-stream-net
   transcoder:
@@ -137,6 +140,28 @@ services:
       - LOG_LEVEL=trace
     depends_on:
       - mongo
+      - service-manager-backend
+    networks:
+      - your-stream-net
+  
+  # Chat Service
+  chat-service:
+    build: ./Services/ChatService
+    restart: unless-stopped
+    environment:
+      - AUTH_SERVICE_ADDRESS=http://service-manager-backend:3080
+      - USER_AUTH_SERVICE_ADDRESS=http://auth-service:3000
+      - MONGO_HOST=mongo
+      - MONGO_PORT=27017
+      - MONGO_USER=
+      - MONGO_PASSWORD=
+      - MONGO_DB=YourStream-Chat
+      - REDIS_HOST=redis:6379
+      - PORT=3000
+      - LOG_LEVEL=trace
+    depends_on:
+      - mongo
+      - service-manager-backend
     networks:
       - your-stream-net
 
@@ -146,16 +171,22 @@ services:
     restart: unless-stopped
     environment:
       - AUTH_SERVICE_ADDRESS=http://service-manager-backend:3080
+      - USER_AUTH_SERVICE_ADDRESS=http://auth-service:3000
+      - STREAM_API_SERVICE_ADDRESS=http://stream-api:3000
+      - CHAT_SERVICE_ADDRESS=http://chat-service:3000
       - PORT=3000
       - MONGO_HOST=mongo
       - MONGO_PORT=27017
       - MONGO_USER=
       - MONGO_PASSWORD=
       - MONGO_DB=YourStream-Main
-      - REDIS_URL=redis://redis:6379
+      - REDIS_HOST=redis:6379
     depends_on:
       - mongo
       - redis
       - service-manager-backend
+      - auth-service
+      - chat-service
+      - stream-api
     networks:
       - your-stream-net
